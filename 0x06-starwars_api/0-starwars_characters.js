@@ -4,12 +4,8 @@ const util = require('util')
 const request = util.promisify(require('request'))
 const movieId = process.argv[2]
 
-if (!movieId) {
-  process.exit(1)
-}
-
 async function StarWarsCharacters(movieId) {
-  const endpoint = 'https://swapi-api.hbtn.io/api/films/' + filmId
+  const endpoint = 'https://swapi-api.hbtn.io/api/films/' + movieId
   let response = await (await request(endpoint)).body
   response = JSON.parse(response)
   const characters = response.characters
