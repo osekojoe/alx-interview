@@ -1,5 +1,4 @@
 #!/usr/bin/node
-
 const util = require('util');
 const request = util.promisify(require('request'));
 const movieId = process.argv[2];
