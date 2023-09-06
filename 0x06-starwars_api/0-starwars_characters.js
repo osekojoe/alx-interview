@@ -11,7 +11,7 @@ async function StarWarsCharacters(movieId) {
 
   for (let i = 0; i < characters.length; i++) {
     const characterUrl = characters[i];
-    let character = await(await request(characterUrl)).body;
+    let character = await (await request(characterUrl)).body;
     character = JSON.parse(character);
     console.log(character.name);
   }
